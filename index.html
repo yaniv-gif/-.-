@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ג'ריקו אספינוזה | מומחה לחיפוי רצפה</title>
+    <meta name="description" content="מומחה להתקנת פרקט פישבון, תלת-שכבותי, מתיחת שטיחים בשיטה אמריקאית וחידוש דקים. עבודה מדויקת ונקייה." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bronze: {
+                50: '#fdf8f6',
+                100: '#f2e8e5',
+                200: '#eaddd7',
+                300: '#e0ccb9',
+                400: '#d0a98e',
+                500: '#b07d62', // Muted Terra Cotta / Bronze
+                600: '#9a634a',
+                700: '#7f4f3b',
+              },
+              stone: {
+                50: '#fafaf9', // Main Background (Warm Alabaster)
+                100: '#f5f5f4',
+                200: '#e7e5e4',
+                300: '#d6d3d1',
+                400: '#a8a29e',
+                500: '#78716c',
+                600: '#57534e',
+                700: '#44403c',
+                800: '#292524', // Primary Text (Deep Walnut)
+                900: '#1c1917', // Headers
+                950: '#0c0a09',
+              }
+            },
+            fontFamily: {
+              serif: ['"Frank Ruhl Libre"', 'serif'],
+              sans: ['"Heebo"', 'sans-serif'],
+            },
+            letterSpacing: {
+              'widest-xl': '0.2em',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #fafaf9; /* Stone 50 */
+        color: #1c1917;
+        overflow-x: hidden;
+      }
+      
+      /* Smooth Reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Image Parallax Effect Helper */
+      .parallax-img {
+        transition: transform 0.5s ease-out;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f5f4; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d6d3d1; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b07d62; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px"
+        });
+
+        const mutationObserver = new MutationObserver((mutations) => {
+          document.querySelectorAll('.reveal').forEach((el) => {
+            if (!el.classList.contains('active')) {
+              observer.observe(el);
+            }
+          });
+        });
+
+        mutationObserver.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+      });
+    </script>
+  </body>
+</html>
