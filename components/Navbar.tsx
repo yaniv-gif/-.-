@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,22 +18,17 @@ export const Navbar: React.FC = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled 
-          ? 'bg-stone-50/90 backdrop-blur-md py-4 shadow-sm border-b border-stone-200' 
+          ? 'bg-stone-50/95 backdrop-blur-md py-3 shadow-sm border-b border-stone-200' 
           : 'bg-transparent py-8'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Brand */}
-        <div className="flex flex-col">
-          <span className={`font-serif text-xl md:text-2xl tracking-wide transition-colors duration-500 ${isScrolled ? 'text-stone-900 font-bold' : 'text-white font-medium'}`}>
-            ג'ריקו אספינוזה
-          </span>
-          <span className={`text-[0.6rem] uppercase tracking-[0.3em] transition-colors duration-500 ${isScrolled ? 'text-bronze-600' : 'text-stone-200'}`}>
-            מומחה לחיפוי רצפה
-          </span>
+        {/* Brand Logo Container */}
+        <div className="relative flex items-center">
+           <Logo variant="horizontal" lightMode={!isScrolled} />
         </div>
 
-        {/* CTA */}
+        {/* CTA Button */}
         <a 
           href="https://wa.me/972500000000" 
           target="_blank"

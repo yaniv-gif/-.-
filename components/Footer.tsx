@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,14 +11,15 @@ export const Footer: React.FC = () => {
             
             {/* Brand */}
             <div className="reveal max-w-sm">
-                <h3 className="text-4xl font-serif text-white mb-6">ג'ריקו אספינוזה</h3>
-                <p className="text-stone-400 font-sans font-light leading-relaxed mb-8">
+                {/* Logo Component - Vertical Variant for Footer */}
+                <div className="mb-8">
+                  <Logo variant="vertical" lightMode={true} />
+                </div>
+
+                <p className="text-stone-400 font-sans font-light leading-relaxed mb-8 text-center md:text-right">
                     התקנת פרקטים ושטיחים בסטנדרט בינלאומי.
                     אנו משרתים אדריכלים, מעצבי פנים ולקוחות פרטיים שלא מתפשרים על פחות משלמות.
                 </p>
-                <div className="flex gap-4">
-                  {/* Social placeholders could go here */}
-                </div>
             </div>
 
             {/* Contact Details */}
