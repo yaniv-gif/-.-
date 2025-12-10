@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -14,11 +15,15 @@ function App() {
     <div className="min-h-screen bg-stone-50 text-stone-900 selection:bg-bronze-500 selection:text-white overflow-x-hidden font-sans">
       <Navbar />
       <Hero />
-      {/* Services moved up for immediate value proposition */}
+      {/* Services moved up for immediate value proposition - The "What" */}
       <Services />
+      {/* Visual Proof - The "Evidence" */}
       <VisualProof />
+      {/* Methodology - The "Why Us" (Philosophy) */}
       <Methodology />
+      {/* Process - The "How" (Trust) */}
       <Process />
+      {/* About - The "Who" (Connection) */}
       <About />
       <Footer />
       <StickyCTA />
