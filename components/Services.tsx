@@ -7,7 +7,7 @@ const services = [
     id: "01",
     title: "התקנות פרקט",
     subtitle: "פרקט ופישבון",
-    description: "מומחיות בפרקט פישבון, תלת-שכבתי ולמינציה. ביצוע פילוס מדויק והדבקה מלאה.",
+    description: "מומחיות בפרקט פישבון, תלת-שכבתי, SPC ולמינציה. ביצוע פילוס מדויק והדבקה מלאה.",
     image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1200&auto=format&fit=crop",
     waMessage: "היי, אשמח לקבל פרטים על התקנת פרקט"
   },
@@ -21,7 +21,7 @@ const services = [
   },
   {
     id: "03",
-    title: "תיקון ושחזור",
+    title: "תיקון פרקטים ושטיחים",
     subtitle: "מומחיות בשיקום",
     description: "החלפת לוחות פגומים, מתיחה מחדש לשטיחים רופפים, וטיפול בנזקי מים.",
     image: "https://images.unsplash.com/photo-1581850518616-bcb8077a2536?q=80&w=1200&auto=format&fit=crop",
@@ -54,8 +54,8 @@ export const Services: React.FC = () => {
             </h2>
           </div>
           <p className="hidden md:block text-stone-500 font-sans text-sm max-w-xs leading-relaxed text-left border-l-2 border-bronze-200 pl-6">
-            החליקו על השירותים לפירוט.<br/> 
-            לחיצה תוביל לייעוץ מיידי בוואטסאפ.
+            לחצו על שירות לפירוט.<br/> 
+            מעבר לייעוץ בוואטסאפ.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export const Services: React.FC = () => {
 
               {/* Mobile Title (Always Visible) */}
               <div className="absolute inset-0 flex items-center justify-center md:hidden pointer-events-none">
-                 <h3 className="text-2xl font-serif text-white tracking-widest drop-shadow-lg">
+                 <h3 className="text-2xl font-serif text-white tracking-widest drop-shadow-lg text-center px-4">
                   {service.title}
                 </h3>
               </div>
