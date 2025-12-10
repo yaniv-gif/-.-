@@ -57,10 +57,10 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'horizontal', className = 
 
       {/* Text Brand */}
       <div className="flex flex-col">
-        <span className={`font-serif text-2xl md:text-3xl font-bold leading-none tracking-wide ${textColor}`}>
+        <span className={`font-serif text-2xl md:text-3xl font-bold leading-none tracking-wide whitespace-nowrap ${textColor}`}>
           ג'ריקו אספינוזה
         </span>
-        <span className={`text-[10px] md:text-xs font-sans font-bold tracking-[0.25em] uppercase mt-1 ${subTextColor}`}>
+        <span className={`text-[10px] md:text-xs font-sans font-bold tracking-[0.25em] uppercase mt-1 whitespace-nowrap ${subTextColor}`}>
           מומחה לחיפוי רצפה
         </span>
       </div>

@@ -41,26 +41,26 @@ export const Services: React.FC = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   return (
-    <section className="py-24 bg-stone-900 text-white overflow-hidden">
+    <section className="py-20 bg-stone-50 text-stone-900 overflow-hidden">
       <div className="container mx-auto px-6 h-full">
         
-        {/* Header */}
+        {/* Header - Now Dark Text on Light Background */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
           <div>
-            <span className="text-bronze-500 font-bold tracking-[0.2em] text-xs uppercase mb-3 block">Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">
+            <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-3 block">Expertise</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
               השירותים<br/>
-              <span className="text-stone-500">שלנו.</span>
+              <span className="text-stone-400">שלנו.</span>
             </h2>
           </div>
-          <p className="hidden md:block text-stone-400 font-sans text-sm max-w-xs leading-relaxed text-left border-l-2 border-bronze-800 pl-6">
+          <p className="hidden md:block text-stone-500 font-sans text-sm max-w-xs leading-relaxed text-left border-l-2 border-bronze-200 pl-6">
             החליקו על השירותים לפירוט.<br/> 
             לחיצה תוביל לייעוץ מיידי בוואטסאפ.
           </p>
         </div>
 
         {/* Desktop: Horizontal Accordion | Mobile: Vertical Stack */}
-        <div className="flex flex-col md:flex-row gap-2 h-auto md:h-[600px] w-full reveal delay-100">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-1 h-auto md:h-[550px] w-full reveal delay-100">
           {services.map((service) => (
             <a 
               key={service.id}
@@ -69,9 +69,9 @@ export const Services: React.FC = () => {
               rel="noopener noreferrer"
               className={`relative overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group
                 ${activeId === service.id ? 'md:flex-[3]' : 'md:flex-1'}
-                h-[400px] md:h-full w-full md:w-auto
-                bg-stone-800
-                border-r border-stone-800 md:border-none
+                h-[250px] md:h-full w-full md:w-auto
+                bg-stone-200
+                border-b-4 md:border-b-0 md:border-l-4 border-white
               `}
               onMouseEnter={() => setActiveId(service.id)}
               onMouseLeave={() => setActiveId(null)}
@@ -90,8 +90,8 @@ export const Services: React.FC = () => {
               </div>
 
               {/* Architectural Number */}
-              <span className="absolute top-6 right-6 text-6xl font-serif font-bold text-transparent opacity-20 select-none z-10" 
-                style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}>
+              <span className="absolute top-4 right-4 md:top-6 md:right-6 text-4xl md:text-6xl font-serif font-bold text-transparent opacity-30 select-none z-10" 
+                style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
                 {service.id}
               </span>
 
@@ -100,22 +100,29 @@ export const Services: React.FC = () => {
                 ${activeId === service.id ? 'opacity-0' : 'opacity-100'}
                 hidden md:flex
               `}>
-                <h3 className="text-3xl font-serif text-white tracking-widest whitespace-nowrap rotate-90 opacity-70 group-hover:opacity-100 transition-opacity">
+                <h3 className="text-3xl font-serif text-white tracking-widest whitespace-nowrap rotate-90 opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg">
+                  {service.title}
+                </h3>
+              </div>
+
+              {/* Mobile Title (Always Visible) */}
+              <div className="absolute inset-0 flex items-center justify-center md:hidden pointer-events-none">
+                 <h3 className="text-2xl font-serif text-white tracking-widest drop-shadow-lg">
                   {service.title}
                 </h3>
               </div>
 
               {/* Expanded Content */}
-              <div className={`absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end z-20 transition-all duration-500
-                 ${activeId === service.id ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-100 md:opacity-0'}
+              <div className={`absolute bottom-0 left-0 right-0 p-6 md:p-8 flex flex-col justify-end z-20 transition-all duration-500
+                 ${activeId === service.id ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-100 md:opacity-0 hidden md:flex'}
               `}>
                 <span className="text-bronze-400 text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
                     {service.subtitle}
                 </span>
-                <h3 className="text-3xl font-serif text-white mb-4">
+                <h3 className="text-3xl font-serif text-white mb-4 hidden md:block">
                   {service.title}
                 </h3>
-                <p className={`text-stone-300 font-sans font-light text-sm leading-relaxed mb-6 max-w-md transition-opacity duration-500 ${activeId === service.id ? 'opacity-100' : 'opacity-0 md:hidden'}`}>
+                <p className={`text-stone-200 font-sans font-light text-sm leading-relaxed mb-6 max-w-md transition-opacity duration-500 ${activeId === service.id ? 'opacity-100' : 'opacity-0 md:hidden'}`}>
                   {service.description}
                 </p>
 

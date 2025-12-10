@@ -4,7 +4,7 @@ import { VolumeX, Maximize, ShieldCheck } from 'lucide-react';
 
 export const Methodology: React.FC = () => {
   return (
-    <section className="py-24 bg-stone-50 overflow-hidden relative">
+    <section className="py-16 bg-stone-50 overflow-hidden relative">
       {/* Decorative Background Text */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 opacity-5 pointer-events-none select-none overflow-hidden">
         <span className="text-[20rem] font-serif font-bold text-stone-900 leading-none">The</span>
@@ -13,7 +13,7 @@ export const Methodology: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             
             {/* Editorial Image Side */}
             <div className="w-full lg:w-1/2 reveal">

@@ -2,11 +2,10 @@
 import React from 'react';
 import { Button } from './Button';
 import { ArrowLeft } from 'lucide-react';
-import { Logo } from './Logo';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative h-[90vh] min-h-[700px] flex items-end md:items-center justify-start overflow-hidden">
+    <section className="relative h-[80vh] min-h-[600px] flex items-end md:items-center justify-start overflow-hidden">
       
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
@@ -29,11 +28,15 @@ export const Hero: React.FC = () => {
         {/* Bottom Gradient for Text */}
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent"></div>
 
-        {/* TOP GRADIENT (New): Ensures Navbar Logo is visible against bright videos */}
+        {/* TOP GRADIENT: Navbar visibility */}
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-stone-900/60 to-transparent pointer-events-none z-10"></div>
+
+        {/* BOTTOM FADE: Seamless transition to Light Content */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-stone-50 to-transparent pointer-events-none z-10"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 pb-20 md:pb-0">
+      {/* Content Container - Added pt-32 to prevent Navbar overlap */}
+      <div className="relative z-10 container mx-auto px-6 pb-20 md:pb-0 pt-32 md:pt-24">
         <div className="max-w-4xl">
           <div className="reveal mb-6 inline-flex items-center gap-4">
             <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">

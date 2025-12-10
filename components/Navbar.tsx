@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled 
           ? 'bg-stone-50/95 backdrop-blur-md py-3 shadow-sm border-b border-stone-200' 
-          : 'bg-transparent py-8'
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -33,12 +33,16 @@ export const Navbar: React.FC = () => {
           href="https://wa.me/972500000000" 
           target="_blank"
           rel="noopener noreferrer"
-          className={`group flex items-center gap-3 border rounded-sm px-6 py-2 transition-all duration-300 ${
+          className={`group flex items-center gap-3 border rounded-sm px-4 md:px-6 py-2 transition-all duration-300 ${
             isScrolled 
               ? 'border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white' 
               : 'border-white/30 bg-white/10 text-white hover:bg-white hover:text-stone-900 backdrop-blur-sm'
           }`}
         >
+          {/* Mobile: Short Text | Desktop: Full Text */}
+          <span className="md:hidden text-xs font-bold tracking-widest uppercase">
+            ייעוץ
+          </span>
           <span className="hidden md:inline text-xs font-bold tracking-widest uppercase transition-colors">
             תיאום ייעוץ
           </span>

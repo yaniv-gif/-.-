@@ -4,13 +4,35 @@ import { ChevronsLeftRight } from 'lucide-react';
 
 export const Transformation: React.FC = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
+  const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
+
+  // Robust Resize Observer to handle image width perfectly
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+
+    // Initial width
+    updateWidth();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateWidth();
+    });
+
+    resizeObserver.observe(containerRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, []);
 
   const handleMove = (event: React.MouseEvent | React.TouchEvent) => {
     if (!containerRef.current) return;
     
-    // Calculate position relative to container
     const containerRect = containerRef.current.getBoundingClientRect();
     let clientX;
 
@@ -20,6 +42,7 @@ export const Transformation: React.FC = () => {
       clientX = (event as React.MouseEvent).clientX;
     }
 
+    // Calculate percentage from LEFT edge of container
     const position = ((clientX - containerRect.left) / containerRect.width) * 100;
     const clampedPosition = Math.min(Math.max(position, 0), 100);
     
@@ -40,22 +63,30 @@ export const Transformation: React.FC = () => {
     }
   };
 
-  // Add global event listeners for smoother dragging outside container
   useEffect(() => {
     const handleGlobalMouseUp = () => {
       isDragging.current = false;
     };
     
     window.addEventListener('mouseup', handleGlobalMouseUp);
+    window.addEventListener('touchend', handleGlobalMouseUp);
     return () => {
       window.removeEventListener('mouseup', handleGlobalMouseUp);
+      window.removeEventListener('touchend', handleGlobalMouseUp);
     };
   }, []);
 
+  // RTL LOGIC:
+  // "Before" (Concrete) is the Overlay. Anchored to RIGHT.
+  // "After" (Nice Floor) is the Background. Visible on the LEFT.
+  // Dragging slider to the RIGHT (increasing %) reveals more "Before".
+  // Dragging slider to the LEFT (decreasing %) reveals more "After".
+  // This feels like wiping away the old floor to reveal the new one (Right to Left wipe).
+
   return (
-    <section className="py-24 bg-stone-900 overflow-hidden">
+    <section className="py-16 bg-stone-900 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 reveal">
           <div>
              <span className="text-bronze-500 font-bold tracking-widest uppercase text-xs mb-2 block">המהפך</span>
              <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight">
@@ -71,52 +102,59 @@ export const Transformation: React.FC = () => {
         {/* Slider Container */}
         <div 
           ref={containerRef}
-          className="relative w-full h-[400px] md:h-[600px] rounded-sm overflow-hidden cursor-ew-resize group shadow-2xl shadow-black/50"
+          className="relative w-full h-[350px] md:h-[500px] rounded-sm overflow-hidden cursor-ew-resize group shadow-2xl shadow-black/50 select-none touch-none"
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onTouchMove={handleMove}
+          onTouchStart={handleMouseDown}
         >
-          {/* AFTER Image (Background - The "New" Floor) */}
+          {/* BACKGROUND LAYER -> AFTER (The Future/Result) - Visible on LEFT */}
           <div className="absolute inset-0">
              <img 
               src="https://images.unsplash.com/photo-1581850518616-bcb8077a2536?q=80&w=1600&auto=format&fit=crop" 
               alt="After Flooring" 
               className="w-full h-full object-cover"
+              draggable="false"
             />
-            <div className="absolute top-6 left-6 bg-stone-900/80 backdrop-blur text-white px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-sm">
+            {/* Label: Left Side */}
+            <div className="absolute top-6 left-6 bg-stone-900/80 backdrop-blur text-white px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-sm border border-white/10 shadow-lg z-10">
               אחרי
             </div>
           </div>
 
-          {/* BEFORE Image (Clipped overlay - The "Old" Floor) */}
-          {/* Using raw concrete/construction image */}
+          {/* OVERLAY LAYER -> BEFORE (The Past/Raw) - Anchored RIGHT */}
+          {/* As width increases, it covers more from Right to Left */}
           <div 
-            className="absolute inset-0 overflow-hidden"
-            style={{ width: `${sliderPosition}%` }}
+            className="absolute top-0 bottom-0 right-0 overflow-hidden border-l-4 border-white shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+            style={{ width: `${100 - sliderPosition}%` }}
           >
             <img 
               src="https://images.unsplash.com/photo-1628151016004-e538f9720c24?q=80&w=1600&auto=format&fit=crop" 
               alt="Before Flooring" 
-              className="absolute top-0 w-full h-full object-cover max-w-none"
-              // Note: We set width to container width via max-w-none to prevent squishing
-              style={{ width: containerRef.current?.offsetWidth || '100%' }} 
+              className="absolute top-0 h-full object-cover max-w-none"
+              // CRITICAL: Force the inner image to match the full container width 
+              // so it doesn't squish when the parent div shrinks.
+              // Also anchor it right so it aligns with the overlay.
+              style={{ width: containerWidth ? `${containerWidth}px` : '100%', right: 0 }} 
+              draggable="false"
             />
-             {/* Overlay for darker "before" vibe */}
-             <div className="absolute inset-0 bg-stone-900/40"></div>
+             {/* Darken the "Before" state slightly to make "After" pop more */}
+             <div className="absolute inset-0 bg-black/40"></div>
              
-             <div className="absolute top-6 right-6 bg-white/90 backdrop-blur text-stone-900 px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-sm">
+             {/* Label: Right Side */}
+             <div className="absolute top-6 right-6 bg-white/90 backdrop-blur text-stone-900 px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-sm shadow-lg z-10">
               לפני
             </div>
           </div>
 
           {/* Slider Handle Line */}
           <div 
-            className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-20 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
+            className="absolute top-0 bottom-0 w-px bg-transparent z-20"
             style={{ left: `${sliderPosition}%` }}
           >
             {/* Handle Button */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-bronze-500 rounded-full flex items-center justify-center shadow-xl border-4 border-white transition-transform group-hover:scale-110">
-              <ChevronsLeftRight className="text-white w-5 h-5" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-bronze-500/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.3)] border border-white/50 transition-transform duration-200 group-hover:scale-110">
+              <ChevronsLeftRight className="text-white w-6 h-6" />
             </div>
           </div>
           

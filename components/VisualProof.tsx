@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, ArrowLeft } from 'lucide-react';
 
@@ -34,7 +35,7 @@ export const VisualProof: React.FC = () => {
   const waLink = `https://wa.me/972500000000?text=${encodeURIComponent(portfolioMessage)}`;
 
   return (
-    <section className="py-24 bg-stone-50 border-t border-stone-200">
+    <section className="py-16 bg-white border-t border-stone-100">
       <div className="container mx-auto px-6">
         
         {/* Section Header */}
@@ -85,7 +86,7 @@ export const VisualProof: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center reveal delay-300">
+        <div className="mt-12 text-center reveal delay-300">
           <a 
             href={waLink} 
             target="_blank" 

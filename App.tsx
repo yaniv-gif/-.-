@@ -9,6 +9,7 @@ import { Services } from './components/Services';
 import { VisualProof } from './components/VisualProof';
 import { Footer } from './components/Footer';
 import { StickyCTA } from './components/StickyCTA';
+import { Transformation } from './components/Transformation';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Services />
       {/* Visual Proof - The "Evidence" */}
       <VisualProof />
+      {/* Transformation - The "Magic" (Visualizing the change) */}
+      <Transformation />
       {/* Methodology - The "Why Us" (Philosophy) */}
       <Methodology />
       {/* Process - The "How" (Trust) */}
