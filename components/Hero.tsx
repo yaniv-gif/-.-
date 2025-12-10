@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from './Button';
 import { ArrowLeft } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Hero: React.FC = () => {
   return (
@@ -23,7 +25,12 @@ export const Hero: React.FC = () => {
         
         {/* Cinematic Overlay - Darker at bottom for text readability */}
         <div className="absolute inset-0 bg-stone-900/40 mix-blend-multiply"></div>
+        
+        {/* Bottom Gradient for Text */}
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent"></div>
+
+        {/* TOP GRADIENT (New): Ensures Navbar Logo is visible against bright videos */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-stone-900/60 to-transparent pointer-events-none z-10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-6 pb-20 md:pb-0">

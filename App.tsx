@@ -14,9 +14,10 @@ function App() {
     <div className="min-h-screen bg-stone-50 text-stone-900 selection:bg-bronze-500 selection:text-white overflow-x-hidden font-sans">
       <Navbar />
       <Hero />
-      <Methodology />
+      {/* Services moved up for immediate value proposition */}
       <Services />
       <VisualProof />
+      <Methodology />
       <Process />
       <About />
       <Footer />
