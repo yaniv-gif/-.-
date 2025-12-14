@@ -23,8 +23,8 @@ function App() {
       <VisualProof />
       {/* Transformation - The "Magic" (Visualizing the change) */}
       <Transformation />
-      {/* Methodology Section Removed as per request */}
-      {/* Process - The "How" (Trust) */}
+      {/* Methodology Section Removed */}
+      {/* Process - The "How" (Technical Trust) */}
       <Process />
       {/* About - The "Who" (Connection) */}
       <About />

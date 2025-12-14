@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <p className="text-stone-400 font-sans leading-relaxed mb-6">
-                    מתמחים בחיפויי רצפה – פרקטים ושטיחים מקיר לקיר.
-                    עבודה מקצועית, שקיפות מלאה ומחיר הוגן.
+                    מומחים בחיפוי רצפה, דקים ופרגולות.<br/>
+                    עבודה מקצועית, שירות אדיב ומחיר הוגן.
                 </p>
                 <div className="inline-block px-4 py-2 bg-stone-800 rounded text-sm text-stone-300">
                     אזור שירות: השרון והמרכז

@@ -75,13 +75,6 @@ export const Transformation: React.FC = () => {
     };
   }, []);
 
-  // RTL LOGIC:
-  // "Before" (Concrete) is the Overlay. Anchored to RIGHT.
-  // "After" (Nice Floor) is the Background. Visible on the LEFT.
-  // Dragging slider to the RIGHT (increasing %) reveals more "Before".
-  // Dragging slider to the LEFT (decreasing %) reveals more "After".
-  // This feels like wiping away the old floor to reveal the new one (Right to Left wipe).
-
   return (
     <section className="py-16 bg-stone-900 overflow-hidden">
       <div className="container mx-auto px-6">
@@ -89,7 +82,7 @@ export const Transformation: React.FC = () => {
           <div>
              <span className="text-bronze-500 font-bold tracking-widest uppercase text-xs mb-2 block">המהפך</span>
              <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight">
-              רואים את ההבדל.<br/>
+              שקט בעיניים.<br/>
               <span className="text-stone-500">לפני ואחרי.</span>
             </h2>
           </div>

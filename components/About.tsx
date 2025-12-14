@@ -12,37 +12,32 @@ export const About: React.FC = () => {
              <Quote className="text-bronze-500 w-12 h-12 mb-6 opacity-30" strokeWidth={1} />
              
              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
-              הלב ישראלי.<br/>
-              <span className="text-bronze-600 italic">הסטנדרט בינלאומי.</span>
+              כבוד לחומר.<br/>
+              <span className="text-bronze-600 italic">כבוד לבית.</span>
             </h2>
 
             <div className="space-y-6 font-sans text-lg font-light leading-relaxed text-stone-600">
               <p>
-                נעים להכיר, ג'ריקו. נולדתי בפיליפינים, במקום שבו כבוד למקצוע, סבלנות ודיוק הם דרך חיים. את הערכים האלו הבאתי איתי לישראל.
+                <strong>נולדתי בפיליפינים</strong>, שם ספגתי מגיל צעיר את ערכי העבודה הקשה, הסבלנות והכבוד לפרטים הקטנים. בישראל אני מביא את אותה מסירות לכל בית שאני נכנס אליו.
               </p>
               <p>
-                אני חי את ענף הבנייה והשיפוצים בארץ כבר שנים רבות. היתרון שלי הוא השילוב בין מוסר העבודה והשקט התרבותי שגדלתי עליו, לבין ההבנה המדויקת של מה הלקוח הישראלי מחפש: עמידה במילה, עבודה נקייה, ובלי "חאפריות".
+                הגישה שלי פשוטה: רצפה היא הרהיט הכי חשוב בבית. השילוב בין המנטליות של דיוק ורוגע לבין הניסיון המקצועי שצברתי, מבטיח עבודה שקטה ותוצאה מושלמת.
               </p>
               <p className="text-stone-900 font-medium border-r-4 border-bronze-500 pr-6 mt-8 py-2 bg-stone-50/50">
-                אצלנו לא שומעים צעקות ולא מעשנים בתוך הבית. אנחנו מגיעים, עושים עבודה מושלמת בשקט, ומשאירים אתכם עם רצפה חדשה וחיוך.
+                כשאתם מפקידים בידיי את מפתחות הבית, אתם מקבלים שקט נפשי מלא ותוצאה שתישמר לשנים.
               </p>
             </div>
 
             <div className="mt-12 flex items-center gap-6 pt-8 border-t border-stone-100">
-               {/* Portrait */}
-               <div className="relative">
-                 <div className="absolute inset-0 rounded-full border border-bronze-500/30 scale-110"></div>
-                 <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" alt="Jericho" className="w-20 h-20 rounded-full grayscale object-cover border-2 border-white shadow-lg relative z-10" />
-               </div>
+               {/* Note: Small duplicate portrait removed as requested */}
                
                <div>
                   <span className="font-serif text-2xl text-stone-900 block leading-none mb-2">ג'ריקו אספינוזה</span>
                   <div className="flex items-center gap-3">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-bronze-600 font-bold">מומחה לחיפוי רצפה</span>
-                    <span className="w-1 h-1 bg-stone-300 rounded-full"></span>
-                    <div className="text-xs text-stone-500 uppercase tracking-widest font-bold mt-1">
-                      ניסיון עשיר בהתקנת פרקטים ושטיחים
-                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-bronze-600 font-bold">• Master Installer</span>
+                  </div>
+                  <div className="text-xs text-stone-500 uppercase tracking-widest font-bold mt-1">
+                      ניסיון עשיר בהתקנות יוקרה
                   </div>
                   
                   {/* Master Signature Graphic */}
@@ -62,12 +57,6 @@ export const About: React.FC = () => {
                 alt="Precision Measurement" 
                 className="w-full h-[600px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000"
               />
-              
-              {/* Experience Badge */}
-              <div className="absolute bottom-0 left-0 bg-white p-8 border-t-4 border-bronze-500 shadow-xl hidden md:block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <div className="text-5xl font-serif text-stone-900 font-medium">15+</div>
-                <div className="text-xs text-stone-500 uppercase tracking-widest font-bold mt-1">שנות ניסיון</div>
-              </div>
             </div>
             
             {/* Decorative Element */}

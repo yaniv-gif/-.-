@@ -3,7 +3,7 @@ import { ShieldCheck, Clock, CheckCircle } from 'lucide-react';
 
 export const Methodology: React.FC = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white border-t border-stone-100">
       <div className="container mx-auto px-6">
         
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
