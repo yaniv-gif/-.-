@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const TrustedPartners: React.FC = () => {
@@ -18,7 +17,7 @@ export const TrustedPartners: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
           
           <div className="text-stone-500 text-xs font-bold tracking-[0.2em] uppercase whitespace-nowrap">
-            Trusted by Leaders
+            מותגים מובילים
           </div>
 
           {/* Logos Container */}

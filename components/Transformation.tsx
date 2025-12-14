@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronsLeftRight } from 'lucide-react';
 
@@ -95,7 +94,7 @@ export const Transformation: React.FC = () => {
             </h2>
           </div>
           <p className="text-stone-400 font-sans font-light mt-4 md:mt-0 max-w-sm text-left rtl:text-right">
-            החליקו כדי לראות את ההבדל בין רצפה סטנדרטית לעבודת אומנות.
+            החליקו כדי לראות את ההבדל בין רצפה סטנדרטית לעבודת אומן.
           </p>
         </div>
 

@@ -37,12 +37,12 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="reveal delay-100 text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight">
-            פרקטים ודקים.<br />
+            פרקטים, דקים ופרגולות.<br />
             <span className="text-stone-200">עבודה כמו שצריך.</span>
           </h1>
           
           <div className="reveal delay-200 text-lg md:text-xl text-stone-100 max-w-xl mb-10 font-sans font-normal leading-relaxed">
-             <p className="mb-2">התקנה מדויקת, מחיר ידוע מראש ושמירה על הניקיון.</p>
+             <p className="mb-2">התקנה מדויקת, עמידה בזמנים, מחיר ידוע מראש ושמירה על הניקיון.</p>
              <p>בלי הפתעות, בלי "תוספות" ברגע האחרון, ובלי עיגול פינות.</p>
           </div>
 
@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
             </Button>
             <div className="hidden md:flex items-center gap-2 px-6 py-4 bg-black/20 rounded-sm backdrop-blur-sm">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-white text-sm font-medium">זמין לעבודה באזור המרכז</span>
+              <span className="text-white text-sm font-medium">זמין לעבודה באזור השרון והמרכז</span>
             </div>
           </div>
         </div>

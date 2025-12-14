@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 
@@ -21,7 +20,7 @@ export const Process: React.FC = () => {
     },
     {
       num: "04",
-      title: "White Glove",
+      title: "מסירה מוקפדת",
       desc: "מסירה בסטנדרט מלונאי: שאיבה יסודית, החזרת הריהוט למקומו, והדרכה על תחזוקה נכונה.",
       isHighlight: true
     }
@@ -37,7 +36,7 @@ export const Process: React.FC = () => {
         
         {/* Header */}
         <div className="text-center mb-24 reveal">
-            <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-3 block">The Standard</span>
+            <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-3 block">הסטנדרט</span>
             <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">התהליך השקט</h2>
             <div className="h-px w-24 bg-stone-900 mx-auto"></div>
             <p className="text-stone-500 mt-6 font-light max-w-2xl mx-auto text-lg leading-relaxed">
