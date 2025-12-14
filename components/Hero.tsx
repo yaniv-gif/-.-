@@ -20,36 +20,36 @@ export const Hero: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         
-        {/* LIGHTER Overlay (Changed to /20) to see video clearly */}
+        {/* LIGHTER Overlay */}
         <div className="absolute inset-0 bg-stone-950/20"></div>
         
-        {/* Subtle Gradient for text readability at the bottom/left */}
+        {/* Subtle Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/60 via-transparent to-transparent"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-6 pb-20 md:pb-0 pt-32 md:pt-24">
         <div className="max-w-4xl">
           <div className="reveal mb-6 inline-flex items-center gap-4">
-            <span className="bg-bronze-500 text-white px-3 py-1 text-xs md:text-sm font-bold tracking-[0.2em] uppercase rounded-sm border border-bronze-400/30 backdrop-blur-sm">
-              מומחה לחיפוי רצפה
+            <span className="bg-bronze-600 text-white px-3 py-1 text-xs md:text-sm font-bold tracking-[0.2em] uppercase rounded-sm border border-bronze-400/30 backdrop-blur-sm">
+              MASTER INSTALLER
             </span>
           </div>
           
           <h1 className="reveal delay-100 text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-lg">
-            ההבדל בין רצפה<br />
-            <span className="text-bronze-100">ליצירת מופת.</span>
+            שלמות.<br />
+            <span className="text-bronze-100">מהיסוד ועד הגימור.</span>
           </h1>
           
           <div className="reveal delay-200 text-lg md:text-2xl text-stone-100 max-w-2xl mb-12 font-sans font-light leading-relaxed drop-shadow-md">
              <p className="border-r-4 border-bronze-500 pr-6">
-               התקנת פרקטים ושטיחים בסטנדרט שטרם הכרתם.<br/>
-               <span className="text-white font-normal">דיוק כירורגי. עמידה בזמנים. אפס תקלות.</span>
+               התקנות פרקט ושטיחים בשיטות עבודה בינלאומיות.<br/>
+               <span className="text-white font-normal">ללא פשרות על איכות, ללא עיגול פינות, ובהתחייבות ללוחות זמנים.</span>
              </p>
           </div>
 
           <div className="reveal delay-300 flex flex-col sm:flex-row gap-5 items-start">
             <Button variant="light" href="https://wa.me/972500000000?text=היי ג'ריקו, אשמח להצעת מחיר" className="hover:scale-105 transition-transform duration-300 shadow-xl">
-              <span className="font-bold">תיאום פגישת ייעוץ</span>
+              <span className="font-bold">לתיאום פגישה</span>
               <ArrowLeft className="mr-2 h-5 w-5" strokeWidth={2} />
             </Button>
             

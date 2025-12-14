@@ -38,10 +38,10 @@ export const Services: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
           <div>
-            <span className="text-bronze-600 font-bold tracking-widest text-xs uppercase mb-3 block">המומחיות שלנו</span>
+            <span className="text-bronze-600 font-bold tracking-widest text-xs uppercase mb-3 block">המקצועיות שלנו</span>
             <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight font-bold">
-              שירותי<br/>
-              <span className="text-stone-500">הבוטיק.</span>
+              תחומי<br/>
+              <span className="text-stone-500">ההתמחות.</span>
             </h2>
           </div>
           <p className="hidden md:block text-stone-600 font-sans text-base max-w-xs leading-relaxed text-left border-l-4 border-bronze-500 pl-6">

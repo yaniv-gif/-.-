@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check } from 'lucide-react';
 
 export const Process: React.FC = () => {
   const steps = [
@@ -11,18 +10,17 @@ export const Process: React.FC = () => {
     {
       num: "02",
       title: "הכנת התשתית",
-      desc: "לבידוד (Underlay) חיטוי, יישום מדה מתפלסת (במידת הצורך) והתקנת תשתית אקוסטית רעשים מקסימלי."
+      desc: "חיטוי יסודי, יישום מדה מתפלסת (במידת הצורך) והתקנת תשתית אקוסטית (Underlay) לבידוד רעשים מקסימלי."
     },
     {
       num: "03",
-      title: "התקנת אומן",
+      title: "התקנה מדויקת",
       desc: "חיתוך מדויק, התאמה למשקופים ויישום דבק פולימרי ירוק. עבודה 'שקטה' המכבדת את המרחב הביתי."
     },
     {
       num: "04",
       title: "מסירה בסטנדרט מלונאי",
-      desc: "שאיבה יסודית, החזרת הריהוט למקומו, והדרכה על תחזוקה נכונה.",
-      isHighlight: true
+      desc: "שאיבה יסודית, החזרת הריהוט למקומו, והדרכה מלאה על תחזוקה נכונה לשמירה על התוצאה."
     }
   ];
 
@@ -35,74 +33,53 @@ export const Process: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-24 reveal">
-            <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-3 block">הסטנדרט</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">התהליך השקט</h2>
-            <div className="h-px w-24 bg-stone-900 mx-auto"></div>
-            <p className="text-stone-500 mt-6 font-light max-w-2xl mx-auto text-lg leading-relaxed">
-              אנחנו לא רק מתקינים רצפה. אנחנו מנהלים פרויקט בתוך הבית שלך, <br className="hidden md:block"/> במינימום הפרעה ובמקסימום דיוק.
-            </p>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 reveal">
+            <div className="max-w-xl">
+                <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-4 block">שיטת העבודה</span>
+                <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
+                    התהליך השקט.
+                </h2>
+                <div className="h-px w-20 bg-stone-900 mt-6 mb-6"></div>
+                <p className="text-stone-500 font-light text-lg leading-relaxed">
+                  אנחנו לא רק מתקינים רצפה. אנחנו מנהלים פרויקט בתוך הבית שלך, במינימום הפרעה ובמקסימום דיוק.
+                </p>
+            </div>
         </div>
 
-        {/* Timeline Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+        {/* Architectural Timeline Grid */}
+        <div className="relative">
           
-          {/* Connecting Line (Desktop) */}
-          <div className="hidden md:block absolute top-[2.75rem] right-0 left-0 h-px bg-stone-300 -z-10 w-full" />
-          
-          {/* Connecting Line (Mobile) */}
-          <div className="md:hidden absolute top-0 bottom-0 right-1/2 w-px bg-stone-200 -z-10 translate-x-1/2" />
+          {/* Timeline Line (Desktop Only) */}
+          <div className="hidden md:block absolute top-[2rem] right-0 left-0 h-px bg-stone-300 w-full" />
 
-          {steps.map((step, idx) => (
-            <div key={idx} className="group relative flex flex-col items-center text-center reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
-              
-              {/* Hexagon Shape Container */}
-              <div className="relative mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-                {/* Hexagon SVG Background */}
-                <svg 
-                  width="90" 
-                  height="90" 
-                  viewBox="0 0 100 100" 
-                  className={`drop-shadow-xl transition-all duration-500 ${step.isHighlight ? 'text-stone-900' : 'text-stone-100 group-hover:text-white'}`}
-                  fill="currentColor"
-                >
-                  <polygon points="50 0, 95 25, 95 75, 50 100, 5 75, 5 25" />
-                </svg>
-
-                {/* Stroke Outline (Separate for crispness) */}
-                <svg 
-                  width="90" 
-                  height="90" 
-                  viewBox="0 0 100 100" 
-                  className="absolute inset-0 pointer-events-none"
-                  fill="none"
-                >
-                  <polygon 
-                    points="50 0, 95 25, 95 75, 50 100, 5 75, 5 25" 
-                    stroke="currentColor" 
-                    strokeWidth="1"
-                    className={`${step.isHighlight ? 'text-stone-900' : 'text-stone-300 group-hover:text-bronze-500'} transition-colors duration-500`}
-                  />
-                </svg>
-
-                {/* Number Content */}
-                <div className={`absolute inset-0 flex items-center justify-center font-serif text-2xl font-bold ${step.isHighlight ? 'text-white' : 'text-stone-400 group-hover:text-bronze-600'}`}>
-                  {step.isHighlight ? <Check size={28} strokeWidth={3} /> : step.num}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+            {steps.map((step, idx) => (
+              <div key={idx} className="group relative flex flex-col items-start reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
+                
+                {/* Number / Node */}
+                <div className="relative mb-8 w-full flex items-center">
+                    {/* The Dot on the line */}
+                    <div className="w-4 h-4 rounded-full bg-stone-50 border-2 border-bronze-500 z-10 relative group-hover:bg-bronze-500 group-hover:scale-125 transition-all duration-300"></div>
+                    
+                    {/* Large Number Offset */}
+                    <span className="absolute -top-10 right-4 text-6xl font-serif text-stone-200 group-hover:text-stone-900 transition-colors duration-500 opacity-50 group-hover:opacity-100 select-none">
+                        {step.num}
+                    </span>
                 </div>
-              </div>
 
-              {/* Text Content */}
-              <div className="relative px-2 bg-stone-50 md:bg-transparent py-2 md:py-0 z-10">
-                <h3 className={`text-xl font-serif font-bold mb-3 transition-colors duration-300 ${step.isHighlight ? 'text-stone-900' : 'text-stone-800 group-hover:text-bronze-700'}`}>
-                  {step.title}
-                </h3>
-                <p className="text-stone-500 leading-relaxed font-light text-sm">
-                  {step.desc}
-                </p>
-              </div>
+                {/* Content */}
+                <div className="relative z-10 pr-2">
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-4 group-hover:text-bronze-700 transition-colors duration-300">
+                    {step.title}
+                  </h3>
+                  <p className="text-stone-500 leading-relaxed font-light text-sm border-r border-stone-200 pr-4 group-hover:border-bronze-300 transition-colors duration-300">
+                    {step.desc}
+                  </p>
+                </div>
 
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
