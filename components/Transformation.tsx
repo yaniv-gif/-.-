@@ -89,12 +89,12 @@ export const Transformation: React.FC = () => {
           <div>
              <span className="text-bronze-500 font-bold tracking-widest uppercase text-xs mb-2 block">המהפך</span>
              <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight">
-              שקט בעיניים.<br/>
+              רואים את ההבדל.<br/>
               <span className="text-stone-500">לפני ואחרי.</span>
             </h2>
           </div>
           <p className="text-stone-400 font-sans font-light mt-4 md:mt-0 max-w-sm text-left rtl:text-right">
-            החליקו כדי לראות את ההבדל בין רצפה סטנדרטית לעבודת אומן.
+            החליקו כדי לראות את ההבדל בין רצפה סטנדרטית לעבודת אומנות.
           </p>
         </div>
 

@@ -12,19 +12,19 @@ export const About: React.FC = () => {
              <Quote className="text-bronze-500 w-12 h-12 mb-6 opacity-30" strokeWidth={1} />
              
              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
-              כבוד לחומר.<br/>
-              <span className="text-bronze-600 italic">כבוד לבית.</span>
+              הלב ישראלי.<br/>
+              <span className="text-bronze-600 italic">הסטנדרט בינלאומי.</span>
             </h2>
 
             <div className="space-y-6 font-sans text-lg font-light leading-relaxed text-stone-600">
               <p>
-                הגישה שלי פשוטה: אני מאמין שרצפה היא הרהיט הכי חשוב בבית. היא הבסיס להכל.
+                נעים להכיר, ג'ריקו. נולדתי בפיליפינים, במקום שבו כבוד למקצוע, סבלנות ודיוק הם דרך חיים. את הערכים האלו הבאתי איתי לישראל.
               </p>
               <p>
-                השילוב בין סבלנות לפרטים הקטנים לבין יעילות ביצוע, מבטיח עבודה שקטה ותוצאה מושלמת. אני לא "נעלם" באמצע הפרויקט ולא משאיר קצוות פתוחים.
+                אני חי את ענף הבנייה והשיפוצים בארץ כבר שנים רבות. היתרון שלי הוא השילוב בין מוסר העבודה והשקט התרבותי שגדלתי עליו, לבין ההבנה המדויקת של מה הלקוח הישראלי מחפש: עמידה במילה, עבודה נקייה, ובלי "חאפריות".
               </p>
               <p className="text-stone-900 font-medium border-r-4 border-bronze-500 pr-6 mt-8 py-2 bg-stone-50/50">
-                כשאתם מפקידים בידיי את מפתחות הבית, אתם מקבלים שקט נפשי מלא ותוצאה שתישמר לשנים רבות.
+                אצלנו לא שומעים צעקות ולא מעשנים בתוך הבית. אנחנו מגיעים, עושים עבודה מושלמת בשקט, ומשאירים אתכם עם רצפה חדשה וחיוך.
               </p>
             </div>
 
@@ -40,7 +40,9 @@ export const About: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <span className="text-[10px] uppercase tracking-[0.2em] text-bronze-600 font-bold">מומחה לחיפוי רצפה</span>
                     <span className="w-1 h-1 bg-stone-300 rounded-full"></span>
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-stone-400">Master Installer</span>
+                    <div className="text-xs text-stone-500 uppercase tracking-widest font-bold mt-1">
+                      ניסיון עשיר בהתקנת פרקטים ושטיחים
+                    </div>
                   </div>
                   
                   {/* Master Signature Graphic */}
@@ -61,10 +63,10 @@ export const About: React.FC = () => {
                 className="w-full h-[600px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000"
               />
               
-              {/* Experience Badge - Styled to match Process Hexagons */}
+              {/* Experience Badge */}
               <div className="absolute bottom-0 left-0 bg-white p-8 border-t-4 border-bronze-500 shadow-xl hidden md:block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <div className="text-5xl font-serif text-stone-900 font-medium">15+</div>
-                <div className="text-xs text-stone-500 uppercase tracking-widest font-bold mt-1">שנות ניסיון בהתקנות יוקרה</div>
+                <div className="text-xs text-stone-500 uppercase tracking-widest font-bold mt-1">שנות ניסיון</div>
               </div>
             </div>
             

@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative h-[80vh] min-h-[600px] flex items-end md:items-center justify-start overflow-hidden">
+    <section className="relative h-[85vh] min-h-[600px] flex items-end md:items-center justify-start overflow-hidden">
       
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
@@ -14,46 +14,48 @@ export const Hero: React.FC = () => {
           loop 
           playsInline
           poster="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=1920&auto=format&fit=crop"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transform scale-105"
         >
-          {/* Deck/Outdoor brighter video if possible, using existing asset for now but lighter overlay */}
+          {/* Restored the original outdoor/deck video */}
           <source src="https://videos.pexels.com/video-files/7578552/7578552-uhd_2560_1440_30fps.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
-        {/* Lighter Overlay for approachable feel */}
-        <div className="absolute inset-0 bg-stone-900/40"></div>
+        {/* Darker Overlay for text contrast and mood */}
+        <div className="absolute inset-0 bg-stone-950/50"></div>
         
-        {/* Bottom Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent"></div>
+        {/* Subtle Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-stone-900/40 to-transparent"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-6 pb-20 md:pb-0 pt-32 md:pt-24">
         <div className="max-w-4xl">
           <div className="reveal mb-6 inline-flex items-center gap-4">
-            <span className="bg-bronze-600/90 text-white px-4 py-1 text-sm font-bold tracking-widest uppercase rounded-sm">
-              פרקטים • דקים • פרגולות
+            <span className="bg-bronze-500 text-white px-3 py-1 text-xs md:text-sm font-bold tracking-[0.2em] uppercase rounded-sm border border-bronze-400/30 backdrop-blur-sm">
+              מומחה לחיפוי רצפה
             </span>
           </div>
           
-          <h1 className="reveal delay-100 text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight">
-            פרקטים, דקים ופרגולות.<br />
-            <span className="text-stone-200">עבודה כמו שצריך.</span>
+          <h1 className="reveal delay-100 text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-2xl">
+            ההבדל בין רצפה<br />
+            <span className="text-bronze-100">ליצירת מופת.</span>
           </h1>
           
-          <div className="reveal delay-200 text-lg md:text-xl text-stone-100 max-w-xl mb-10 font-sans font-normal leading-relaxed">
-             <p className="mb-2">התקנה מדויקת, עמידה בזמנים, מחיר ידוע מראש ושמירה על הניקיון.</p>
-             <p>בלי הפתעות, בלי "תוספות" ברגע האחרון, ובלי עיגול פינות.</p>
+          <div className="reveal delay-200 text-lg md:text-2xl text-stone-200 max-w-2xl mb-12 font-sans font-light leading-relaxed">
+             <p className="border-r-4 border-bronze-500 pr-6">
+               התקנת פרקטים ושטיחים בסטנדרט שטרם הכרתם.<br/>
+               <span className="text-white font-normal">דיוק כירורגי. עמידה בזמנים. אפס תקלות.</span>
+             </p>
           </div>
 
-          <div className="reveal delay-300 flex flex-col sm:flex-row gap-4 items-start">
-            <Button variant="light" href="https://wa.me/972500000000?text=היי ג'ריקו, אשמח להצעת מחיר">
-              <span>קבל הצעת מחיר בוואטסאפ</span>
-              <ArrowLeft className="mr-2 h-4 w-4" strokeWidth={2} />
+          <div className="reveal delay-300 flex flex-col sm:flex-row gap-5 items-start">
+            <Button variant="light" href="https://wa.me/972500000000?text=היי ג'ריקו, אשמח להצעת מחיר" className="hover:scale-105 transition-transform duration-300">
+              <span className="font-bold">תיאום פגישת ייעוץ</span>
+              <ArrowLeft className="mr-2 h-5 w-5" strokeWidth={2} />
             </Button>
-            <div className="hidden md:flex items-center gap-2 px-6 py-4 bg-black/20 rounded-sm backdrop-blur-sm">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-white text-sm font-medium">זמין לעבודה באזור השרון והמרכז</span>
+            
+            <div className="hidden md:flex flex-col justify-center h-full px-4">
+               <span className="text-stone-300 text-sm font-light tracking-wide">זמינות מיידית באזור השרון והמרכז</span>
             </div>
           </div>
         </div>

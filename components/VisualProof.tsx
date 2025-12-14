@@ -15,17 +15,17 @@ export const VisualProof: React.FC = () => {
     {
       id: 2,
       title: "דופלקס, רמת אביב ג'",
-      category: "חיפוי מדרגות עץ אלון",
-      // Image: Wooden Stairs / High end interior
-      image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
+      category: "שטיח מקיר לקיר (מתיחה)",
+      // Image: Carpet installation / cozy room
+      image: "https://images.unsplash.com/photo-1574872658804-9a8c6cb41398?q=80&w=800&auto=format&fit=crop",
       className: "col-span-1 h-[240px]"
     },
     {
       id: 3,
       title: "פנטהאוז, נווה צדק",
-      category: "חידוש דק איפאה",
-      // Image: Rooftop Deck
-      image: "https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=800&auto=format&fit=crop",
+      category: "חידוש פרקט אלון",
+      // Image: Renovated Wood
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
       className: "col-span-1 h-[240px]"
     }
   ];

@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <p className="text-stone-400 font-sans leading-relaxed mb-6">
-                    מומחים בחיפוי רצפה, דקים ופרגולות.
-                    עבודה מקצועית, שירות אדיב ומחיר הוגן.
+                    מתמחים בחיפויי רצפה – פרקטים ושטיחים מקיר לקיר.
+                    עבודה מקצועית, שקיפות מלאה ומחיר הוגן.
                 </p>
                 <div className="inline-block px-4 py-2 bg-stone-800 rounded text-sm text-stone-300">
                     אזור שירות: השרון והמרכז

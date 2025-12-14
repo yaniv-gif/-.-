@@ -41,7 +41,7 @@ export const Methodology: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-stone-900 mb-2">הצעת מחיר הוגנת וסופית</h3>
                             <p className="text-stone-600 leading-relaxed">
-                                מה שסגרנו זה מה שתשלמו. אין "תוספות" מפתיעות ביום העבודה ואין אותיות קטנות. הכל על השולחן מראש.
+                                מה שסגרנו – זה בדיוק מה שתשלמו. אין "תוספות" מפתיעות במחיר ביום העבודה, ואין אותיות קטנות. הכל על השולחן מראש.
                             </p>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ export const Methodology: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-stone-900 mb-2">דיוק בזמנים</h3>
                             <p className="text-stone-600 leading-relaxed">
-                                אנחנו מכבדים את הזמן שלכם. מתחילים ביום שקבענו, ומסיימים בדיוק כפי שהתחייבנו.
+                                אנחנו מכבדים את הזמן שלכם – מתחילים ביום שקבענו, ומסיימים בזמן בדיוק כפי שהתחייבנו.
                             </p>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ export const Methodology: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-stone-900 mb-2">משאירים נקי</h3>
                             <p className="text-stone-600 leading-relaxed">
-                                אנחנו לא משאירים אתר בנייה בבית שלכם. עובדים מסודר, מפנים את הפסולת, ומשאירים שטח נקי בסיום העבודה.
+                                אנחנו לא משאירים אצלכם אתר בנייה. עובדים מסודר, מפנים את כל הפסולת בסוף כל יום, ומשאירים את השטח נקי לחלוטין בסיום העבודה.
                             </p>
                         </div>
                     </div>

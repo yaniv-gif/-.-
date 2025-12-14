@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
-import { Methodology } from './components/Methodology';
 import { Process } from './components/Process';
 import { Services } from './components/Services';
 import { VisualProof } from './components/VisualProof';
@@ -25,8 +23,7 @@ function App() {
       <VisualProof />
       {/* Transformation - The "Magic" (Visualizing the change) */}
       <Transformation />
-      {/* Methodology - The "Why Us" (Philosophy) */}
-      <Methodology />
+      {/* Methodology Section Removed as per request */}
       {/* Process - The "How" (Trust) */}
       <Process />
       {/* About - The "Who" (Connection) */}
