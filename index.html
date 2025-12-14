@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ג'ריקו אספינוזה | מומחה לחיפוי רצפה</title>
-    <meta name="description" content="מומחה להתקנת פרקט פישבון, תלת-שכבותי, מתיחת שטיחים בשיטה אמריקאית וחידוש דקים. עבודה מדויקת ונקייה." />
+    <title>ג'ריקו אספינוזה | פרקטים, דקים ופרגולות</title>
+    <meta name="description" content="התקנת פרקטים, דקים ופרגולות במרכז. עבודה מקצועית, מחיר הוגן ועמידה בזמנים. בלי משחקים ובלי לכלוך. דברו איתנו." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,22 +20,22 @@
                 200: '#eaddd7',
                 300: '#e0ccb9',
                 400: '#d0a98e',
-                500: '#b07d62', // Muted Terra Cotta / Bronze
+                500: '#b07d62',
                 600: '#9a634a',
                 700: '#7f4f3b',
               },
               stone: {
-                50: '#fafaf9', // Main Background (Warm Alabaster)
-                100: '#f5f5f4',
-                200: '#e7e5e4',
-                300: '#d6d3d1',
-                400: '#a8a29e',
-                500: '#78716c',
-                600: '#57534e',
-                700: '#44403c',
-                800: '#292524', // Primary Text (Deep Walnut)
-                900: '#1c1917', // Headers
-                950: '#0c0a09',
+                50: '#f8fafc', // Cooler, cleaner white/grey
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
+                500: '#64748b', // Slate grey (Trust)
+                600: '#475569',
+                700: '#334155',
+                800: '#1e293b', // Navy/Dark Slate
+                900: '#0f172a', 
+                950: '#020617',
               }
             },
             fontFamily: {
@@ -43,7 +43,7 @@
               sans: ['"Heebo"', 'sans-serif'],
             },
             letterSpacing: {
-              'widest-xl': '0.2em',
+              'widest-xl': '0.1em', // Reduced spacing for more grounded look
             }
           }
         }
@@ -54,16 +54,16 @@
         scroll-behavior: smooth;
       }
       body {
-        background-color: #fafaf9; /* Stone 50 */
-        color: #1c1917;
+        background-color: #f8fafc;
+        color: #0f172a;
         overflow-x: hidden;
       }
       
       /* Smooth Reveal */
       .reveal {
         opacity: 0;
-        transform: translateY(40px);
-        transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        transform: translateY(20px); /* Reduced motion */
+        transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
       }
       
       .reveal.active {
@@ -71,23 +71,17 @@
         transform: translateY(0);
       }
 
-      /* Image Parallax Effect Helper */
-      .parallax-img {
-        transition: transform 0.5s ease-out;
-      }
-
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #f5f5f4; 
+        background: #f1f5f9; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #d6d3d1; 
+        background: #94a3b8; 
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #b07d62; 
+        background: #64748b; 
       }
     </style>
   <script type="importmap">

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Quote } from 'lucide-react';
 
@@ -13,19 +12,19 @@ export const About: React.FC = () => {
              <Quote className="text-bronze-500 w-12 h-12 mb-6 opacity-30" strokeWidth={1} />
              
              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
-              תרבות של שקט.<br/>
-              <span className="text-bronze-600 italic">סטנדרט של מומחה.</span>
+              כבוד לחומר.<br/>
+              <span className="text-bronze-600 italic">כבוד לבית.</span>
             </h2>
 
             <div className="space-y-6 font-sans text-lg font-light leading-relaxed text-stone-600">
               <p>
-                השורשים שלי בפיליפינים העניקו לי את הסבלנות האינסופית לפרטים הקטנים ואת הכבוד העמוק למרחב האישי של הלקוח.
+                הגישה שלי פשוטה: אני מאמין שרצפה היא הרהיט הכי חשוב בבית. היא הבסיס להכל.
               </p>
               <p>
-                החיים והעסקים בישראל לימדו אותי שזמן הוא משאב יקר. השילוב הזה יוצר חוויה נדירה בנוף המקומי: עבודה שקטה, אסתטית ומנומסת, עם התחייבות ברזל ללוחות זמנים ולתוצאה.
+                השילוב בין סבלנות לפרטים הקטנים לבין יעילות ביצוע, מבטיח עבודה שקטה ותוצאה מושלמת. אני לא "נעלם" באמצע הפרויקט ולא משאיר קצוות פתוחים.
               </p>
               <p className="text-stone-900 font-medium border-r-4 border-bronze-500 pr-6 mt-8 py-2 bg-stone-50/50">
-                כשאתם מפקידים בידיי את מפתחות הבית, אתם מקבלים לא רק רצפה חדשה, אלא שקט נפשי מלא.
+                כשאתם מפקידים בידיי את מפתחות הבית, אתם מקבלים שקט נפשי מלא ותוצאה שתישמר לשנים.
               </p>
             </div>
 

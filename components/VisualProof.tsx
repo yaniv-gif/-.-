@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, ArrowLeft } from 'lucide-react';
 
@@ -10,14 +9,15 @@ export const VisualProof: React.FC = () => {
       category: "פרקט פישבון אלון אירופאי",
       // Image: Grand Living Room
       image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1200&auto=format&fit=crop",
-      className: "col-span-1 md:col-span-2 row-span-2 h-[500px]"
+      // FIX: Changed h-[500px] to h-[350px] md:h-[500px] for mobile optimization
+      className: "col-span-1 md:col-span-2 row-span-2 h-[350px] md:h-[500px]"
     },
     {
       id: 2,
-      title: "משרדי הייטק, מגדל עזריאלי",
-      category: "שטיחים מקיר לקיר (מתיחה)",
-      // Image: Corporate Office
-      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop",
+      title: "דופלקס, רמת אביב ג'",
+      category: "חיפוי מדרגות עץ אלון",
+      // Image: Wooden Stairs / High end interior
+      image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
       className: "col-span-1 h-[240px]"
     },
     {
