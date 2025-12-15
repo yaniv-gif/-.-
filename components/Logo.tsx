@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface LogoProps {
@@ -9,7 +8,6 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ variant = 'horizontal', className = '', lightMode = false }) => {
   const textColor = lightMode ? 'text-white' : 'text-stone-900';
-  const subTextColor = lightMode ? 'text-stone-300' : 'text-bronze-600';
   const iconColor = lightMode ? '#b07d62' : '#b07d62'; // Bronze 500
 
   return (
@@ -17,8 +15,8 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'horizontal', className = 
       
       {/* Geometric Hexagon Knot Icon */}
       <svg 
-        width="50" 
-        height="50" 
+        width="40" 
+        height="40" 
         viewBox="0 0 100 100" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +54,11 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'horizontal', className = 
       </svg>
 
       {/* Text Brand */}
-      <div className="flex flex-col">
-        {/* FIX: Changed text-2xl to text-xl for mobile safety */}
-        <span className={`font-serif text-xl md:text-3xl font-bold leading-none tracking-wide whitespace-nowrap ${textColor}`}>
+      <div className="flex flex-col justify-center h-full">
+        <span className={`font-serif text-xl md:text-2xl font-bold leading-none tracking-wide whitespace-nowrap ${textColor}`}>
           ג'ריקו אספינוזה
         </span>
-        <span className={`text-[10px] md:text-xs font-sans font-bold tracking-[0.25em] uppercase mt-1 whitespace-nowrap ${subTextColor}`}>
-          מומחה לחיפוי רצפה
-        </span>
+        {/* REMOVED: "Expert" subtitle to reduce visual noise */}
       </div>
     </div>
   );

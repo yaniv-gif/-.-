@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Logo } from './Logo';
@@ -30,7 +29,7 @@ export const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <a 
-          href="https://wa.me/972500000000" 
+          href="https://wa.me/972543962871" 
           target="_blank"
           rel="noopener noreferrer"
           className={`group flex items-center gap-3 border rounded-sm px-4 md:px-6 py-2 transition-all duration-300 ${

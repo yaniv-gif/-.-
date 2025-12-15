@@ -1,120 +1,116 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 
 const services = [
   {
     id: "01",
-    title: "התקנות פרקט",
-    subtitle: "פישבון, תלת-שכבתי ורגיל",
-    description: "הדבקת פרקט רגיל, פישבון (Fishbone) ותלת-שכבתי. ביצוע מוקפד על תשתית מפולסת לתוצאה אקוסטית ואסתטית מושלמת.",
+    title: "אומנות הפרקט",
+    subtitle: "Fishbone / Chevron / תלת-שכבתי",
+    description: "התקנה אדריכלית של כל סוגי הפרקט. התמחות ביישום פישבון (Fishbone) והדבקה פולימרית מלאה לתחושה אקוסטית מוצקה. דיוק בחיבורים ובחיתוכי 'אפס' למראה רציף ומושלם.",
     image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1200&auto=format&fit=crop",
-    waMessage: "היי ג'ריקו, אשמח להצעת מחיר להתקנת פרקט"
+    waMessage: "היי, אשמח לייעץ בנושא התקנת פרקט (רגיל/פישבון)"
   },
   {
     id: "02",
-    title: "תיקוני פרקט",
-    subtitle: "כל סוגי תיקוני פרקטים",
-    description: "מומחיות בכל סוגי תיקוני פרקטים: החלפת לוחות פגומים, תיקון נזקי מים, טיפול בשריטות, וחידוש המראה המקורי של הרצפה.",
-    image: "https://images.unsplash.com/photo-1581850518616-bcb8077a2536?q=80&w=1200&auto=format&fit=crop",
-    waMessage: "היי ג'ריקו, יש לי צורך בתיקון פרקט"
+    title: "עולם הטקסטיל",
+    subtitle: "שטיחים מקיר לקיר / מתיחה אמריקאית",
+    description: "הבאת הרכות למרחב הביתי והעסקי. מומחים בשיטה האמריקאית (מתיחה על גריפרים ללא דבק) והשיטה ההולנדית. גימור מוקפד בחיבורים ובסף הדלת למראה יוקרתי ואחיד.",
+    image: "https://images.unsplash.com/photo-1534349762913-961f69056d64?q=80&w=1200&auto=format&fit=crop", 
+    waMessage: "היי, אני מתעניין בהתקנת שטיחים מקיר לקיר"
   },
   {
     id: "03",
-    title: "שטיחים מקיר לקיר",
-    subtitle: "שיטה אמריקאית והולנדית",
-    description: "הדבקות ומתיחת שטיחים בשיטה אמריקאית הולנדית. התאמה מושלמת למרחב ללא גלים, למראה מתוח ויוקרתי.",
-    image: "https://images.unsplash.com/photo-1534349762913-961f69056d64?q=80&w=1200&auto=format&fit=crop", 
-    waMessage: "היי ג'ריקו, אשמח להצעת מחיר לשטיח מקיר לקיר"
+    title: "דקים ומרחבי חוץ",
+    subtitle: "איפאה / טיק / סינטטי / חידוש דקים",
+    description: "תכנון וביצוע דקים מעץ טבעי או סינטטי פרימיום. יצירת הרמוניה בין פנים לחוץ. כולל שירותי חידוש דקים (ליטוש ושימון) להחזרת המראה המקורי והגנה לאורך זמן.",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop",
+    waMessage: "היי, אשמח לפרטים על דקים (התקנה/חידוש)"
+  },
+  {
+    id: "04",
+    title: "שימור וחידוש",
+    subtitle: "תיקוני פרקט / שחזור נזקי מים",
+    description: "טיפול אומנותי בנזקים ללא צורך בהחלפת כל הריצוף. החלפה נקודתית של לוחות פגומים, תיקון שריטות, וטיפול בנזקי מים. החזרת הרצפה למצבה החדש במינימום הפרעה.",
+    image: "https://images.unsplash.com/photo-1581850518616-bcb8077a2536?q=80&w=1200&auto=format&fit=crop",
+    waMessage: "היי, יש לי תקלה בפרקט ואשמח לייעוץ לתיקון"
   }
 ];
 
 export const Services: React.FC = () => {
-  const [activeId, setActiveId] = useState<string | null>(null);
-
   return (
-    <section className="py-20 bg-stone-50 text-stone-900 overflow-hidden">
-      <div className="container mx-auto px-6 h-full">
+    <section className="py-24 bg-stone-50 text-stone-900 border-b border-stone-200">
+      <div className="container mx-auto px-6">
         
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-          <div>
-            <span className="text-bronze-600 font-bold tracking-widest text-xs uppercase mb-3 block">המקצועיות שלנו</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight font-bold">
-              תחומי<br/>
-              <span className="text-stone-500">ההתמחות.</span>
+        {/* Editorial Header */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+          <div className="max-w-2xl">
+            <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-4 block">
+              קולקציית השירותים
+            </span>
+            <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
+              אומנות החומר.<br/>
+              <span className="text-stone-400">מהתכנון ועד הגימור.</span>
             </h2>
           </div>
-          <p className="hidden md:block text-stone-600 font-sans text-base max-w-xs leading-relaxed text-left border-l-4 border-bronze-500 pl-6">
-            לחצו על שירות לפרטים נוספים.<br/> 
-            וואטסאפ ישיר להצעת מחיר.
-          </p>
+          
+          {/* Soft Invitation CTA (Replaces "Click for Price") */}
+          <div className="mt-8 md:mt-0 max-w-sm text-left rtl:text-right border-r-4 border-bronze-200 pr-6">
+            <p className="text-stone-600 font-sans text-base leading-relaxed mb-2">
+              לא בטוחים מה מתאים לחלל שלכם?
+            </p>
+            <a 
+              href="https://wa.me/972543962871" 
+              className="text-stone-900 font-bold hover:text-bronze-600 transition-colors inline-flex items-center gap-2 group"
+            >
+              <span>אנחנו כאן לייעץ</span>
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
 
-        {/* Desktop: Horizontal Accordion | Mobile: Vertical Stack */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-4 h-auto md:h-[550px] w-full reveal delay-100">
-          {services.map((service) => (
-            <a 
+        {/* 2x2 Boutique Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 reveal delay-100">
+          {services.map((service, idx) => (
+            <div 
               key={service.id}
-              href={`https://wa.me/972500000000?text=${encodeURIComponent(service.waMessage)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`relative overflow-hidden cursor-pointer transition-all duration-700 ease-out group rounded-sm shadow-xl
-                ${activeId === service.id ? 'md:flex-[2.5]' : 'md:flex-1'}
-                h-[300px] md:h-full w-full md:w-auto
-                bg-stone-900 border border-stone-200
-              `}
-              onMouseEnter={() => setActiveId(service.id)}
-              onMouseLeave={() => setActiveId(null)}
+              className="group relative bg-white border border-stone-100 rounded-sm overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 transition-all duration-500 flex flex-col md:flex-row h-auto md:h-[320px]"
             >
-              {/* Background Image */}
-              <div className="absolute inset-0">
+              {/* Image Side */}
+              <div className="w-full md:w-2/5 relative overflow-hidden h-64 md:h-full">
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className={`w-full h-full object-cover transition-all duration-1000 
-                    ${activeId === service.id ? 'grayscale-0 scale-105 opacity-100' : 'grayscale opacity-60'}
-                    group-hover:opacity-100
-                  `}
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/40 to-transparent opacity-90"></div>
+                <div className="absolute inset-0 bg-stone-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
 
-              {/* Vertical Text (When Inactive on Desktop) */}
-              <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 pointer-events-none
-                ${activeId === service.id ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}
-                hidden md:flex
-              `}>
-                <h3 className="text-3xl font-serif font-bold text-white tracking-wide whitespace-nowrap rotate-90 drop-shadow-lg border-b-2 border-bronze-500 pb-2">
-                  {service.title}
-                </h3>
-              </div>
-
-              {/* Expanded Content */}
-              <div className={`absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end z-20 transition-all duration-500
-                 translate-y-0 opacity-100
-                 ${activeId === service.id ? 'md:translate-y-0 md:opacity-100' : 'md:translate-y-8 md:opacity-0'}
-              `}>
-                <div className="transform transition-transform duration-500 delay-100">
-                    <span className="text-bronze-400 text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
-                        {service.subtitle}
-                    </span>
-                    
-                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4 block leading-none">
-                      {service.title}
-                    </h3>
-                    
-                    <p className={`text-stone-300 font-sans text-base leading-relaxed mb-8 max-w-md`}>
-                      {service.description}
-                    </p>
-
-                    {/* Button */}
-                    <div className="inline-flex items-center gap-3 bg-white text-stone-900 px-6 py-3 text-sm font-bold rounded-sm hover:bg-bronze-500 hover:text-white transition-colors duration-300 w-fit">
-                      <span>להצעת מחיר</span>
-                      <MessageCircle className="w-4 h-4" />
-                    </div>
+              {/* Content Side */}
+              <div className="w-full md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
+                <div>
+                  <div className="text-bronze-500 text-[10px] font-bold tracking-[0.15em] uppercase mb-3">
+                    {service.subtitle}
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 group-hover:text-bronze-700 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-stone-500 font-light text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
                 </div>
+
+                {/* Micro CTA */}
+                <a 
+                  href={`https://wa.me/972543962871?text=${encodeURIComponent(service.waMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-stone-900 text-xs font-bold uppercase tracking-widest hover:text-bronze-600 transition-colors mt-auto"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>לבירור פרטים</span>
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
 

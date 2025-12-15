@@ -7,7 +7,6 @@ import { Services } from './components/Services';
 import { VisualProof } from './components/VisualProof';
 import { Footer } from './components/Footer';
 import { StickyCTA } from './components/StickyCTA';
-import { Transformation } from './components/Transformation';
 import { TrustedPartners } from './components/TrustedPartners';
 
 function App() {
@@ -21,9 +20,7 @@ function App() {
       <Services />
       {/* Visual Proof - The "Evidence" */}
       <VisualProof />
-      {/* Transformation - The "Magic" (Visualizing the change) */}
-      <Transformation />
-      {/* Methodology Section Removed */}
+      {/* Transformation Removed - Luxury brands focus on the result, not the construction mess */}
       {/* Process - The "How" (Technical Trust) */}
       <Process />
       {/* About - The "Who" (Connection) */}

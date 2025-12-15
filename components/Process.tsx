@@ -4,23 +4,23 @@ export const Process: React.FC = () => {
   const steps = [
     {
       num: "01",
-      title: "מדידה ותכנון",
-      desc: "מיפוי לייזר של הרצפה ובדיקת לחות בקירות. תכנון פריסה ממוחשב למניעת פחת ולסימטריה מושלמת."
+      title: "מיפוי ודיאגנוסטיקה",
+      desc: "לפני שמניחים לוח אחד, אנחנו מבינים את השטח. מדידות לייזר, בדיקות לחות בקירות (קריטי באקלים הישראלי) ותכנון פריסה שמייצר מינימום פחת וחיתוכים מושלמים."
     },
     {
       num: "02",
-      title: "הכנת התשתית",
-      desc: "חיטוי יסודי, יישום מדה מתפלסת (במידת הצורך) והתקנת תשתית אקוסטית (Underlay) לבידוד רעשים מקסימלי."
+      title: "הכנת הקנבס",
+      desc: "רצפה יוקרתית חייבת בסיס מושלם. אנחנו מיישמים מדה מתפלסת לאיזון אבסולוטי ותשתית אקוסטית מתקדמת. המטרה: שקט. גם לדריכה, וגם לשכנים מלמטה."
     },
     {
       num: "03",
-      title: "התקנה מדויקת",
-      desc: "חיתוך מדויק, התאמה למשקופים ויישום דבק פולימרי ירוק. עבודה 'שקטה' המכבדת את המרחב הביתי."
+      title: "התקנה כירורגית",
+      desc: "הדבקה פולימרית ירוקה, חיתוכי 'אפס' בחיבור לקיר, ועבודה עם שואבים תעשייתיים שמחוברים למסור. בלי ענני אבק, בלי רעש מיותר. אומנות בשקט."
     },
     {
       num: "04",
-      title: "מסירה בסטנדרט מלונאי",
-      desc: "שאיבה יסודית, החזרת הריהוט למקומו, והדרכה מלאה על תחזוקה נכונה לשמירה על התוצאה."
+      title: "מסירה בלבן",
+      desc: "אנחנו לא משאירים אתכם עם פסולת בניין. בסיום: שאיבה יסודית, החזרת הריהוט למקום, והדרכה על שימור העץ. אנחנו משאירים מפתח ויוצאים."
     }
   ];
 
@@ -35,9 +35,9 @@ export const Process: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 reveal">
             <div className="max-w-xl">
-                <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-4 block">שיטת העבודה</span>
+                <span className="text-bronze-600 font-bold tracking-[0.2em] text-xs uppercase mb-4 block">סטנדרט העבודה</span>
                 <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
-                    התהליך השקט.
+                    הפרוטוקול השקט.
                 </h2>
                 <div className="h-px w-20 bg-stone-900 mt-6 mb-6"></div>
                 <p className="text-stone-500 font-light text-lg leading-relaxed">
@@ -50,7 +50,7 @@ export const Process: React.FC = () => {
         <div className="relative">
           
           {/* Timeline Line (Desktop Only) */}
-          <div className="hidden md:block absolute top-[2rem] right-0 left-0 h-px bg-stone-300 w-full" />
+          <div className="hidden md:block absolute top-[2rem] right-0 left-0 h-px bg-gradient-to-l from-transparent via-stone-300 to-transparent w-full" />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
             {steps.map((step, idx) => (
@@ -59,20 +59,20 @@ export const Process: React.FC = () => {
                 {/* Number / Node */}
                 <div className="relative mb-8 w-full flex items-center">
                     {/* The Dot on the line */}
-                    <div className="w-4 h-4 rounded-full bg-stone-50 border-2 border-bronze-500 z-10 relative group-hover:bg-bronze-500 group-hover:scale-125 transition-all duration-300"></div>
+                    <div className="w-5 h-5 rounded-full bg-stone-50 border-2 border-stone-300 z-10 relative group-hover:border-bronze-500 group-hover:bg-bronze-500 transition-all duration-500 shadow-sm"></div>
                     
                     {/* Large Number Offset */}
-                    <span className="absolute -top-10 right-4 text-6xl font-serif text-stone-200 group-hover:text-stone-900 transition-colors duration-500 opacity-50 group-hover:opacity-100 select-none">
+                    <span className="absolute -top-12 right-0 text-7xl font-serif text-stone-100 group-hover:text-stone-900/10 transition-colors duration-500 select-none -z-10">
                         {step.num}
                     </span>
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 pr-2">
+                <div className="relative z-10 pl-4">
                   <h3 className="text-xl font-serif font-bold text-stone-900 mb-4 group-hover:text-bronze-700 transition-colors duration-300">
                     {step.title}
                   </h3>
-                  <p className="text-stone-500 leading-relaxed font-light text-sm border-r border-stone-200 pr-4 group-hover:border-bronze-300 transition-colors duration-300">
+                  <p className="text-stone-500 leading-relaxed font-light text-sm border-r-2 border-transparent pr-4 group-hover:border-bronze-200 transition-all duration-500">
                     {step.desc}
                   </p>
                 </div>
