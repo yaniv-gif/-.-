@@ -1,10 +1,13 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { TrustBar } from './components/TrustBar'; // NEW
 import { About } from './components/About';
 import { Process } from './components/Process';
 import { Services } from './components/Services';
 import { VisualProof } from './components/VisualProof';
+import { Guarantee } from './components/Guarantee'; // NEW
+import { LeadForm } from './components/LeadForm'; // NEW
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { StickyCTA } from './components/StickyCTA';
@@ -16,22 +19,31 @@ function App() {
       <Navbar />
       <Hero />
       
-      {/* Social Proof Anchor - "Who trusts us" */}
+      {/* NEW: Immediate "Hard" Trust Signal */}
+      <TrustBar />
+      
+      {/* Brands Anchor */}
       <TrustedPartners />
       
-      {/* The Offer - "What we do" */}
+      {/* What we do */}
       <Services />
       
-      {/* The Evidence - "See the quality" - Updated to match screenshot perfectly */}
+      {/* Evidence (Optimized for Middle Segment) */}
       <VisualProof />
       
-      {/* The Method - "How we work (Quiet Protocol)" */}
+      {/* NEW: Safety & Warranty (Objection Handling) */}
+      <Guarantee />
+      
+      {/* How we work */}
       <Process />
       
-      {/* The Connection - "Who is Jericho" */}
+      {/* Who is Jericho */}
       <About />
       
-      {/* The Closer - "Objection Handling" */}
+      {/* NEW: Primary Conversion Point */}
+      <LeadForm />
+      
+      {/* Objection Handling */}
       <FAQ />
       
       <Footer />
