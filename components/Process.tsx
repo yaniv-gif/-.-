@@ -52,7 +52,8 @@ export const Process: React.FC = () => {
           {/* Timeline Line (Desktop Only) */}
           <div className="hidden md:block absolute top-[2rem] right-0 left-0 h-px bg-gradient-to-l from-transparent via-stone-300 to-transparent w-full" />
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+          {/* Increased gap and added pt-12 to ensure numbers don't overlap previous text on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8 pt-10 md:pt-0">
             {steps.map((step, idx) => (
               <div key={idx} className="group relative flex flex-col items-start reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
                 

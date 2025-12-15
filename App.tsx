@@ -5,6 +5,7 @@ import { About } from './components/About';
 import { Process } from './components/Process';
 import { Services } from './components/Services';
 import { VisualProof } from './components/VisualProof';
+import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { StickyCTA } from './components/StickyCTA';
 import { TrustedPartners } from './components/TrustedPartners';
@@ -14,17 +15,25 @@ function App() {
     <div className="min-h-screen bg-stone-50 text-stone-900 selection:bg-bronze-500 selection:text-white overflow-x-hidden font-sans">
       <Navbar />
       <Hero />
-      {/* Trusted Partners - Social Proof Anchor */}
+      
+      {/* Social Proof Anchor - "Who trusts us" */}
       <TrustedPartners />
-      {/* Services moved up for immediate value proposition - The "What" */}
+      
+      {/* The Offer - "What we do" */}
       <Services />
-      {/* Visual Proof - The "Evidence" */}
+      
+      {/* The Evidence - "See the quality" - Updated to match screenshot perfectly */}
       <VisualProof />
-      {/* Transformation Removed - Luxury brands focus on the result, not the construction mess */}
-      {/* Process - The "How" (Technical Trust) */}
+      
+      {/* The Method - "How we work (Quiet Protocol)" */}
       <Process />
-      {/* About - The "Who" (Connection) */}
+      
+      {/* The Connection - "Who is Jericho" */}
       <About />
+      
+      {/* The Closer - "Objection Handling" */}
+      <FAQ />
+      
       <Footer />
       <StickyCTA />
     </div>

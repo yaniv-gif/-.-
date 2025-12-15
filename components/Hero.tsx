@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[500px] h-[75vh] md:h-[85vh] flex items-end md:items-center justify-start overflow-hidden">
+    <section className="relative min-h-[600px] h-[75vh] md:h-[85vh] flex items-end md:items-center justify-start overflow-hidden">
       
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
@@ -27,10 +27,8 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/70 via-stone-900/20 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 pb-20 md:pb-0 pt-32 md:pt-24">
+      <div className="relative z-10 container mx-auto px-6 pb-24 md:pb-0 pt-32 md:pt-24">
         <div className="max-w-4xl">
-          
-          {/* REMOVED: "Master Installer" Badge to reduce clutter */}
           
           <h1 className="reveal delay-100 text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-lg">
             עיצוב פנים.<br />
@@ -45,7 +43,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <div className="reveal delay-300 flex flex-col sm:flex-row gap-5 items-start">
-            <Button variant="light" href="https://wa.me/972543962871?text=היי ג'ריקו, אשמח לתאם פגישה בנושא חיפוי רצפה" className="hover:scale-105 transition-transform duration-300 shadow-xl px-10">
+            <Button variant="light" href="https://wa.me/972543962871?text=היי ג'ריקו, אשמח לתאם פגישה בנושא חיפוי רצפה" className="hover:scale-105 transition-transform duration-300 shadow-xl px-10 w-full sm:w-auto">
               <span className="font-bold">תיאום פגישה אישית</span>
               <ArrowLeft className="mr-2 h-5 w-5" strokeWidth={2} />
             </Button>
